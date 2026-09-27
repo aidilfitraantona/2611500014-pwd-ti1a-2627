@@ -1,2 +1,8 @@
-# 2611500014-pwd-ti1a-2627
-Repository Latihan Pertemuan-1 sampai dengan Pertemuan-16 Matakuliah Pemrograman Web Dasar Kelompok TI1A Tahun Ajaran 2025/2026 Semester Gasal
+# {2611500014}-PWD-{ti1a}-2627<br>
+Repository Latihan Pertemuan-1 sampai dengan Pertemuan-16<br>
+Matakuliah Pemrograman Web Dasar<br>
+Nama : Aidil Fitra Antona<br>
+Kelompok {TI1A}<br>
+Tahun Ajaran 2026/2027
+Semester Gasal<br><br>
+![Logo ISBAL](logoisbal.png)
