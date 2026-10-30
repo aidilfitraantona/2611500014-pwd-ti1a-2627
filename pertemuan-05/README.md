@@ -1,1 +1,26 @@
-# pertemuan-05
+# Pertemuan 5 - JavaScript Dasar, DOM, Event, dan Validasi Sisi Klien
+
+## Deskripsi
+Dokumentasi pengembangan halaman web pada P5, meliputi JavaScript, DOM, event listener, interaksi navigasi, dan validasi formulir sisi klien.
+
+## Fitur dan Pengembangan
+- getElementById(): Fungsinya untuk mencari dan mengambil (memilih) satu elemen HTML berdasarkan atribut id, contohnya yaitu const navToggle = document.getElementById("navToggle");.
+- querySelector(): Metode querySelector() digunakan untuk memilih satu elemen HTML berdasarkan selector CSS yang diberikan, contohnya yaitu const jenisPesan = document.querySelector('input[name="jenis_pesan"]:checked');.
+- querySelectorAll(): Metode querySelectorAll() digunakan untuk memilih beberapa elemen HTML yang sesuai dengan selector CSS yang diberikan, contohnya yaitu const topikDipilih = document.querySelectorAll('input[name="minat"]:checked');.
+- addEventListener(): Metode addEventListener() digunakan untuk mendaftarkan event listener pada suatu elemen HTML, sintaks dasar yaitu elemen.addEventListener("nama-event", fungsi);.
+
+## Pengujian
+- getElementById(): Langkahnya yaitu buka index.html di browser pada lebar layar kecil (< 768px), lalu klik tombol ☰ (navToggle). Klik sekali lagi untuk menutup. Hasil aktualnya yaitu Elemen navToggle dan navMenu berhasil diambil lewat Id, menu navigasi tampil saat tombol diklik, dan tersembunyi saat diklik lagi, atribut aria-expanded dan aria-label ikut berubah ("Buka navigasi" dan "Tutup navigasi").
+- querySelector(): Langkahnya yaitu isi seluruh form kecuali "Jenis Pesan" lalu klik Kirim, kemudian pilih salah satu radio button dan klik Kirim lagi. Hasil aktualnya yaitu tanpa pilihan, muncul pesan merah "Pilih jenis pesan." karena querySelector('input[name="jenis_pesan"]:checked') mengembalikan null, setelah salah satu radio dipilih, elemen terpilih ditemukan dan validasi lanjut ke tahap berikutnya.
+- querySelectorAll(): Langkahnya yaitu isi form lainnya tanpa mencentang topik minat lalu klik Kirim, setelah itu centang HTML atau CSS dan klik kirim lagi. Hasil aktualnya yaitu tanpa centang, querySelectorAll('input[name="minat"]:checked') menghasilkan daftar kosong sehingga muncul pesan "Pilih minimal satu topik yang diminati." dengan minimal satu centang, validasi lolos.
+- addEventListener(): Langkahnya yaitu klik kirim dengan data tidak valid, lalu dengan data valid, kemudian ketik di salah satu input dan klik Batal, Hasil aktualnya yaitu Event submit mencegah reload dan menampilkan pesan error merah atau pesan sukses hijau "Form berhasil divalidasi." event input dan reset menghapus pesan feedback.
+
+## Riwayat Pengembangan
+
+Catat perkembangan melalui commit Git yang bermakna.
+
+- membuat file javascript eksternal dan menghubungkannya ke HTML: Membuat script.js dan menghubungkannya ke index.html dengan <script src="script.js"></script>.
+menambahkan menu button baru di HTML dengan class nav-toogle untuk membuat hamburger menu: Menambahkan <button class="nav-toggle" id="navToggle"> di header dan id="navMenu" pada daftar navigasi.
+- menambahkan css untuk hamburger menu dan yang lainnya: Menambahkan gaya untuk hamburger menu (.nav-toggle, #navMenu, .nav-open), media query untuk layar ≥ 768px, serta gaya form dan pesan feedback.
+- mengisi JavaScript untuk logic pemrograman seperti getElementById, addEventListener - querySelector - querySelectorAll: Mengisi script.js dengan getElementById(), addEventListener(), querySelector(), dan querySelectorAll() untuk menu navigasi dan validasi form.
+- mengisi readme untuk dokumentasi: Menulis dokumentasi perubahan dan pengujian.
