@@ -149,51 +149,91 @@ switch ($programStudi) {
 			</article>
 		</section>
 
-		<section id="rencana_kegiatan_mahasiswa" style="padding:40x 20px;">
-			<h2>formulir rencana kegiatan mahasiswa</h2>
 
-			<from action="" method="POST">
 
-				<div style="margin-bottom: 15px;">
-					<label for="nama_kegiatan">Nama Kegiatan:</label><br>
-					<input type="text" id="nama_kegiatan" name="nama_kegiatan" required style="width: 100%; max-width: 400px; padding: 8px;">
+
+		<section id="rencana-kegiatan" class="section">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Rencana Kegiatan Mahasiswa</h2>
+					<p>Silakan isi formulir rencana kegiatan mahasiswa berikut.</p>
 				</div>
 
-				<div style="margin-bottom: 15px;">
-					<label for="kategori_kegiatan">Kategori Kegiatan:</label><br>
-					<select id="kategori_kegiatan" name="kategori_kegiatan" required style="width: 100%; max-width: 419px; padding: 8px;">
-						<option value="">-- Pilih Kategori --</option>
-						<option value="Akademik">Akademik</option>
-						<option value="Non-Akademik">Non-Akademik</option>
-						<option value="Organisasi">Organisasi</option>
-					</select>
-				</div>
+				<form action="proses.php" method="POST">
 
-				<!-- Input 3: Tanggal Pelaksanaan (Date) -->
-				<div style="margin-bottom: 15px;">
-					<label for="tanggal_pelaksanaan">Tanggal Pelaksanaan:</label><br>
-					<input type="date" id="tanggal_pelaksanaan" name="tanggal_pelaksanaan" required style="width: 100%; max-width: 400px; padding: 8px;">
-				</div>
+					<!-- Nama Kegiatan -->
+					<div class="form-group mb-3">
+						<label for="nama_kegiatan">Nama Kegiatan</label>
+						<input type="text"
+							class="form-control"
+							id="nama_kegiatan"
+							name="nama_kegiatan"
+							placeholder="Masukkan nama kegiatan"
+							required>
+					</div>
 
-				<!-- Input 4: Lokasi Kegiatan (Text/Radio/Sesuai kebutuhan) -->
-				<div style="margin-bottom: 15px;">
-					<label for="lokasi_kegiatan">Lokasi Kegiatan:</label><br>
-					<input type="text" id="lokasi_kegiatan" name="lokasi_kegiatan" required style="width: 100%; max-width: 400px; padding: 8px;">
-				</div>
+					<!-- Kategori Kegiatan -->
+					<div class="form-group mb-3">
+						<label for="kategori">Kategori Kegiatan</label>
+						<select class="form-control"
+							id="kategori"
+							name="kategori"
+							required>
+							<option value="">Pilih Kategori</option>
+							<option value="Akademik">Akademik</option>
+							<option value="Olahraga">Olahraga</option>
+							<option value="Seni">Seni</option>
+							<option value="Organisasi">Organisasi</option>
+							<option value="Sosial">Sosial</option>
+							<option value="Lainnya">Lainnya</option>
+						</select>
+					</div>
 
-				<!-- Input 5: Deskripsi Kegiatan (Textarea) -->
-				<div style="margin-bottom: 15px;">
-					<label for="deskripsi_kegiatan">Deskripsi Kegiatan:</label><br>
-					<textarea id="deskripsi_kegiatan" name="deskripsi_kegiatan" rows="4" required style="width: 100%; max-width: 400px; padding: 8px;"></textarea>
-				</div>
+					<!-- Tanggal Pelaksanaan -->
+					<div class="form-group mb-3">
+						<label for="tanggal">Tanggal Pelaksanaan</label>
+						<input type="date"
+							class="form-control"
+							id="tanggal"
+							name="tanggal"
+							required>
+					</div>
 
-				<!-- Tombol Kirim (Submit) dan Reset -->
-				<div>
-					<button type="submit" name="submit_rencana" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">Kirim</button>
-					<button type="reset" style="padding: 10px 20px; background-color: #6c757d; color: white; border: none; cursor: pointer;">Batal</button>
-				</div>
+					<!-- Lokasi Kegiatan -->
+					<div class="form-group mb-3">
+						<label for="lokasi">Lokasi Kegiatan</label>
+						<input type="text"
+							class="form-control"
+							id="lokasi"
+							name="lokasi"
+							placeholder="Masukkan lokasi kegiatan"
+							required>
+					</div>
+
+					<!-- Deskripsi Kegiatan -->
+					<div class="form-group mb-3">
+						<label for="deskripsi">Deskripsi Kegiatan</label>
+						<textarea class="form-control"
+							id="deskripsi"
+							name="deskripsi"
+							rows="5"
+							placeholder="Jelaskan kegiatan yang direncanakan"
+							required></textarea>
+					</div>
+
+					<!-- Tombol -->
+					<button type="submit" class="btn btn-primary">
+						Kirim
+					</button>
+
+					<button type="reset" class="btn btn-secondary">
+						Batal
+					</button>
 
 				</form>
+			</div>
+		</section>
 		</section>
 		<section id="contact">
 			<h2>Kontak</h2>
