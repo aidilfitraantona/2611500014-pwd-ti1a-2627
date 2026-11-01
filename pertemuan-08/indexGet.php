@@ -149,6 +149,52 @@ switch ($programStudi) {
 			</article>
 		</section>
 
+		<section id="rencana_kegiatan_mahasiswa" style="padding:40x 20px;">
+			<h2>formulir rencana kegiatan mahasiswa</h2>
+
+			<from action="" method="POST">
+
+				<div style="margin-bottom: 15px;">
+					<label for="nama_kegiatan">Nama Kegiatan:</label><br>
+					<input type="text" id="nama_kegiatan" name="nama_kegiatan" required style="width: 100%; max-width: 400px; padding: 8px;">
+				</div>
+
+				<div style="margin-bottom: 15px;">
+					<label for="kategori_kegiatan">Kategori Kegiatan:</label><br>
+					<select id="kategori_kegiatan" name="kategori_kegiatan" required style="width: 100%; max-width: 419px; padding: 8px;">
+						<option value="">-- Pilih Kategori --</option>
+						<option value="Akademik">Akademik</option>
+						<option value="Non-Akademik">Non-Akademik</option>
+						<option value="Organisasi">Organisasi</option>
+					</select>
+				</div>
+
+				<!-- Input 3: Tanggal Pelaksanaan (Date) -->
+				<div style="margin-bottom: 15px;">
+					<label for="tanggal_pelaksanaan">Tanggal Pelaksanaan:</label><br>
+					<input type="date" id="tanggal_pelaksanaan" name="tanggal_pelaksanaan" required style="width: 100%; max-width: 400px; padding: 8px;">
+				</div>
+
+				<!-- Input 4: Lokasi Kegiatan (Text/Radio/Sesuai kebutuhan) -->
+				<div style="margin-bottom: 15px;">
+					<label for="lokasi_kegiatan">Lokasi Kegiatan:</label><br>
+					<input type="text" id="lokasi_kegiatan" name="lokasi_kegiatan" required style="width: 100%; max-width: 400px; padding: 8px;">
+				</div>
+
+				<!-- Input 5: Deskripsi Kegiatan (Textarea) -->
+				<div style="margin-bottom: 15px;">
+					<label for="deskripsi_kegiatan">Deskripsi Kegiatan:</label><br>
+					<textarea id="deskripsi_kegiatan" name="deskripsi_kegiatan" rows="4" required style="width: 100%; max-width: 400px; padding: 8px;"></textarea>
+				</div>
+
+				<!-- Tombol Kirim (Submit) dan Reset -->
+				<div>
+					<button type="submit" name="submit_rencana" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">Kirim</button>
+					<button type="reset" style="padding: 10px 20px; background-color: #6c757d; color: white; border: none; cursor: pointer;">Batal</button>
+				</div>
+
+				</form>
+		</section>
 		<section id="contact">
 			<h2>Kontak</h2>
 
@@ -239,10 +285,18 @@ switch ($programStudi) {
 		</section>
 	</main>
 
-	<footer>
-		<p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
-	</footer>
-	<script src="script.js"></script>
+	<nav>
+		<ul>
+			<li><a href="home">Beranda</a></li>
+			<li><a href="#Rencana_kegiatan_mahasiswa">rencana kegiatan</a>
+			<li>
+				<ul>
+					<nav>
+
+						<footer>
+							<p>&copy; <?= date("Y") ?> <?php echo $namaMahasiswa; ?> [<?= $nim ?>]</p>
+						</footer>
+						<script src="script.js"></script>
 </body>
 
 </html>
